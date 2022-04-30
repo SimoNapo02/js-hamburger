@@ -1,15 +1,14 @@
 // faccio diventare variabile gli elementi
-const button = document.getElementById("open-menu");
-const BtnClose = document.getElementById("close-menu")
+const hamburgerMenu = document.getElementsByClassName ("hamburger-menu") [0];
+const openMenu = document.getElementById("open-menu");
 
 // aggiungo al menu l'azione click di apertura e chiusura
-BtnOpen.addEventListener( 'click',
-    function(){
-        document.getElementById("hamburger-menu").classList.add("active")
-    }
-);
-BtnClose.addEventListener( 'click',
-    function(){
-        document.getElementById("hamburger-menu").classList.remove("active")
-    }
-);
+openMenu.addEventListener("click", function()
+{
+   hamburgerMenu.style = "display: block";
+});
+const closenMenu = document.getElementById("close-menu");
+closenMenu.addEventListener("click", function()
+{
+   hamburgerMenu.style = "display: none";
+});
